@@ -4,7 +4,7 @@
     background:
         radial-gradient(800px 460px at 70% 0%, rgba(109, 78, 246, 0.32), transparent 62%),
         var(--bg-dark);
-    min-height: calc(100vh - 72px);
+    min-height: calc(100vh - var(--nav-h));
     display: flex;
     align-items: center;
 }
