@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
 import {
+    DiscordIcon,
     DribbbleIcon,
     GithubIcon,
     GlobeIcon,
@@ -53,6 +54,11 @@ export default function Footer() {
                             <a href="mailto:hello@7411.co.uk" className="footer__contact">
                                 <MailIcon /> hello@7411.co.uk
                             </a>
+                        </li>
+                        <li>
+                            <span className="footer__contact">
+                                <DiscordIcon /> itachip
+                            </span>
                         </li>
                         <li>
                             <span className="footer__contact">
