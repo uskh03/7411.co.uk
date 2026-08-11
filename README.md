@@ -22,22 +22,32 @@ Adding content to a placeholder page: edit `resources/js/pages/<Page>.jsx`.
 Page metadata lives in `app/Http/Controllers/PageController.php` (server) and
 `resources/js/lib/usePageMeta.js` (client) — keep both in sync.
 
+The app is stateless (no sessions, cookies, forms, or database), so it runs
+without an `APP_KEY` — see `bootstrap/app.php`. If you ever add forms, auth,
+or sessions, restore the removed middleware and run `php artisan key:generate`.
+
 ## Local development
 
 ```bash
 composer install
 npm install
-cp .env.example .env
-php artisan key:generate
+cp .env.example .env   # then set APP_ENV=local, APP_DEBUG=true, APP_URL=http://localhost:8000
 npm run dev        # Vite dev server (terminal 1)
 php artisan serve  # Laravel at http://localhost:8000 (terminal 2)
 ```
 
-## Production build
+## Deploy
+
+Point the web server document root at `public/`, then:
 
 ```bash
-npm run build
+composer install --no-dev --optimize-autoloader
+cp .env.example .env   # first deploy only; defaults are production-ready
+npm ci && npm run build
+php artisan config:cache && php artisan route:cache && php artisan view:cache
 ```
+
+No `key:generate` and no migrations needed.
 
 ## SEO
 
