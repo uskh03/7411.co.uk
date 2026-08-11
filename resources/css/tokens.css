@@ -1,0 +1,37 @@
+:root {
+    /* Surfaces */
+    --bg-dark: #05060f;
+    --bg-band: #070b1f;
+    --bg-screen: #0b1226;
+    --bg-panel: #10183a;
+    --surface: #f3f5fa;
+    --card: #ffffff;
+
+    /* Borders */
+    --border-dark: rgba(255, 255, 255, 0.08);
+    --border-light: #e5e9f2;
+
+    /* Text */
+    --text-hi: #ffffff;
+    --text-mid: #a3adc2;
+    --text-dim: #7a86a3;
+    --ink-hi: #0f172a;
+    --ink-mid: #5b6478;
+
+    /* Brand */
+    --brand-blue: #4f6bf5;
+    --brand-violet: #8b5cf6;
+    --gradient-brand: linear-gradient(92deg, var(--brand-blue), var(--brand-violet));
+
+    /* Shape & shadow */
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 10px 28px rgba(15, 23, 42, 0.07);
+    --shadow-glow: 0 8px 28px rgba(99, 102, 241, 0.35);
+
+    /* Type & layout */
+    --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI',
+        Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --container: 1200px;
+}

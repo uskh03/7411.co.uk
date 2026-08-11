@@ -1,0 +1,366 @@
+/* ================= Services grid ================= */
+.services-section {
+    background: var(--surface);
+    padding: 88px 0 44px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+    gap: 16px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 18px;
+    background: var(--card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(79, 107, 245, 0.35);
+    box-shadow: var(--shadow-card);
+}
+
+.service-card__icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+}
+
+.service-card__icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.service-card__icon--red      { background: #fee2e2; color: #ef4444; }
+.service-card__icon--blue     { background: #dbeafe; color: #3b82f6; }
+.service-card__icon--green    { background: #dcfce7; color: #16a34a; }
+.service-card__icon--purple   { background: #ede9fe; color: #8b5cf6; }
+.service-card__icon--orange   { background: #ffedd5; color: #f97316; }
+.service-card__icon--indigo   { background: #e0e7ff; color: #4f46e5; }
+
+.service-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink-hi);
+    letter-spacing: -0.01em;
+}
+
+.service-card p {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--ink-mid);
+}
+
+.service-card__arrow {
+    display: grid;
+    place-items: center;
+    align-self: flex-end;
+    margin-top: auto;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--border-light);
+    border-radius: 50%;
+    color: #94a3b8;
+    transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.service-card__arrow svg {
+    width: 14px;
+    height: 14px;
+}
+
+.service-card:hover .service-card__arrow {
+    background: var(--gradient-brand);
+    border-color: transparent;
+    color: #fff;
+}
+
+/* ================= Why work with me ================= */
+.why-section {
+    background: var(--surface);
+    padding: 44px 0;
+}
+
+.why-band {
+    position: relative;
+    overflow: hidden;
+    padding: 56px 40px 50px;
+    border-radius: var(--radius-lg);
+    background:
+        radial-gradient(560px 300px at 15% 0%, rgba(79, 107, 245, 0.16), transparent 60%),
+        radial-gradient(560px 300px at 85% 100%, rgba(139, 92, 246, 0.14), transparent 60%),
+        var(--bg-band);
+}
+
+.why-band .section-head {
+    margin-bottom: 40px;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 32px 20px;
+}
+
+.why-item {
+    text-align: center;
+}
+
+.why-item__icon {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+}
+
+.why-item__icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.why-item__icon--blue   { background: rgba(79, 107, 245, 0.16); color: #6f8bff; }
+.why-item__icon--green  { background: rgba(34, 197, 94, 0.15);  color: #4ade80; }
+.why-item__icon--purple { background: rgba(139, 92, 246, 0.16); color: #a78bfa; }
+.why-item__icon--amber  { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+.why-item__icon--indigo { background: rgba(99, 102, 241, 0.18); color: #818cf8; }
+
+.why-item h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-hi);
+}
+
+.why-item p {
+    margin-top: 8px;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: #97a1bd;
+}
+
+@media (min-width: 1100px) {
+    .why-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .why-item + .why-item {
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
+        padding-left: 20px;
+    }
+}
+
+/* ================= Pay securely ================= */
+.pay-section {
+    background: var(--surface);
+    padding: 44px 0;
+}
+
+.pay-band {
+    display: grid;
+    grid-template-columns: 1.05fr 1.25fr 1.15fr;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    background: var(--card);
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    box-shadow: var(--shadow-card);
+}
+
+.pay-band__intro h2 {
+    margin-top: 18px;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--ink-hi);
+}
+
+.pay-band__intro p {
+    margin-top: 10px;
+    font-size: 13.5px;
+    color: var(--ink-mid);
+}
+
+.pay-band__methods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.pay-tile {
+    display: grid;
+    place-items: center;
+    height: 56px;
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    background: var(--card);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+/* Brand wordmarks (styled text, no image assets) */
+.paymark--visa   { color: #1a1f71; font-size: 17px; font-weight: 800; font-style: italic; letter-spacing: 0.04em; }
+.paymark--apple  { color: #111;    font-size: 15px; font-weight: 700; }
+.paymark--gpay   { color: #5f6368; font-size: 15px; font-weight: 600; }
+.paymark--gpay b { color: #4285f4; font-weight: 800; }
+.paymark--paypal { color: #003087; font-size: 16px; font-weight: 800; font-style: italic; }
+.paymark--stripe { color: #635bff; font-size: 17px; font-weight: 800; }
+
+.paymark--mc {
+    display: flex;
+}
+
+.paymark--mc i {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.paymark--mc i:first-child {
+    background: #eb001b;
+}
+
+.paymark--mc i:last-child {
+    background: #f79e1b;
+    margin-left: -9px;
+    mix-blend-mode: multiply;
+}
+
+/* Feature list */
+.pay-band__features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pay-band__features li {
+    display: flex;
+    gap: 14px;
+}
+
+.pay-feature__icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.pay-feature__icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.pay-feature__icon--green  { background: #dcfce7; color: #16a34a; }
+.pay-feature__icon--blue   { background: #dbeafe; color: #3b82f6; }
+.pay-feature__icon--indigo { background: #e0e7ff; color: #4f46e5; }
+
+.pay-band__features h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink-hi);
+}
+
+.pay-band__features p {
+    margin-top: 3px;
+    font-size: 12.5px;
+    color: var(--ink-mid);
+}
+
+@media (max-width: 1023px) {
+    .pay-band {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+/* ================= CTA band ================= */
+.cta-section {
+    background: var(--surface);
+    padding: 44px 0 96px;
+}
+
+.cta-band {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 48px;
+    border-radius: var(--radius-lg);
+    background:
+        radial-gradient(520px 280px at 8% 0%, rgba(79, 107, 245, 0.2), transparent 60%),
+        radial-gradient(520px 280px at 92% 100%, rgba(139, 92, 246, 0.16), transparent 60%),
+        var(--bg-band);
+}
+
+.cta-band__copy {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.cta-band__icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-md);
+    background: rgba(79, 107, 245, 0.16);
+    color: #6f8bff;
+}
+
+.cta-band__icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.cta-band__copy .eyebrow {
+    margin-bottom: 8px;
+    color: #a5b4fc;
+}
+
+.cta-band__copy h2 {
+    font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text-hi);
+}
+
+.cta-band__copy p {
+    margin-top: 8px;
+    max-width: 44ch;
+    font-size: 13.5px;
+    color: #97a1bd;
+}
+
+.cta-band__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+@media (max-width: 640px) {
+    .cta-band {
+        padding: 32px 24px;
+    }
+
+    .cta-band__copy {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

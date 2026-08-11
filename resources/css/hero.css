@@ -1,0 +1,134 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(900px 520px at 78% 8%, rgba(109, 78, 246, 0.4), transparent 62%),
+        radial-gradient(700px 420px at 96% 65%, rgba(59, 130, 246, 0.18), transparent 60%),
+        var(--bg-dark);
+}
+
+.hero__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 48px;
+    padding-top: 72px;
+    padding-bottom: 96px;
+}
+
+/* Copy */
+.hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid rgba(139, 92, 246, 0.45);
+    border-radius: 999px;
+    background: rgba(139, 92, 246, 0.12);
+    color: #c4b5fd;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.hero__badge svg {
+    width: 14px;
+    height: 14px;
+    color: #8b5cf6;
+}
+
+.hero__copy h1 {
+    margin-top: 24px;
+    font-size: clamp(2.2rem, 4.6vw, 3.55rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+}
+
+.hero__copy > p {
+    margin-top: 22px;
+    max-width: 46ch;
+    font-size: 16px;
+    color: var(--text-mid);
+    line-height: 1.65;
+}
+
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 34px;
+}
+
+/* Trust row */
+.hero__trust {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 22px;
+    margin-top: 46px;
+}
+
+.hero__trust-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    line-height: 1.6;
+}
+
+.hero__avatars {
+    display: flex;
+}
+
+.hero__avatar {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 2px solid var(--bg-dark);
+    margin-left: -10px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.hero__avatar:first-child {
+    margin-left: 0;
+}
+
+.hero__stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    color: #fbbf24;
+}
+
+.hero__stars svg {
+    width: 15px;
+    height: 15px;
+}
+
+.hero__stars b {
+    margin-left: 6px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.hero__rating-label {
+    display: block;
+    margin-top: 3px;
+    font-size: 12.5px;
+    color: var(--text-mid);
+}
+
+@media (max-width: 1023px) {
+    .hero__inner {
+        grid-template-columns: 1fr;
+        padding-top: 56px;
+        padding-bottom: 72px;
+    }
+}
