@@ -50,8 +50,8 @@ export default function Footer() {
                     <h3>Let's Connect</h3>
                     <ul>
                         <li>
-                            <a href="mailto:hello@7411studio.com" className="footer__contact">
-                                <MailIcon /> hello@7411studio.com
+                            <a href="mailto:hello@7411.co.uk" className="footer__contact">
+                                <MailIcon /> hello@7411.co.uk
                             </a>
                         </li>
                         <li>

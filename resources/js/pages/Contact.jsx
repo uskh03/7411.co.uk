@@ -12,7 +12,7 @@ export default function Contact() {
         >
             <p className="page-hero__contact">
                 Email me at{' '}
-                <a href="mailto:hello@7411studio.com">hello@7411studio.com</a>
+                <a href="mailto:hello@7411.co.uk">hello@7411.co.uk</a>
             </p>
         </PagePlaceholder>
     );

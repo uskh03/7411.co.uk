@@ -72,7 +72,7 @@ class PageController extends Controller
             '@type' => 'ProfessionalService',
             'name' => '7411 Studio',
             'url' => url('/'),
-            'email' => 'hello@7411studio.com',
+            'email' => 'hello@7411.co.uk',
             'description' => $description,
             'areaServed' => 'Worldwide',
             'knowsAbout' => [
