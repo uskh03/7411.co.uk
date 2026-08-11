@@ -10,12 +10,9 @@ export default function PagePlaceholder({ eyebrow, title, description, children 
                 <h1>{title}</h1>
                 <p>{description}</p>
                 {children}
-                <div className="page-hero__note">
-                    <p>This page is under construction — check back soon.</p>
-                    <Link to="/" className="btn btn--gradient">
-                        Back to Home <ArrowRightIcon />
-                    </Link>
-                </div>
+                <Link to="/" className="btn btn--gradient btn--lg page-hero__cta">
+                    Back to Home <ArrowRightIcon />
+                </Link>
             </div>
         </section>
     );
